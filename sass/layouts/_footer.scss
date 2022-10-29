@@ -1,0 +1,141 @@
+footer {
+	background-color: #2f303a;
+	padding: 60px 0;
+}
+
+.footer-second-group {
+	display: flex;
+	align-items: baseline;
+	gap: 70px;
+}
+
+.footer {
+	display: flex;
+	align-items: baseline;
+	gap: 93px;
+}
+
+.contact-info-footer {
+	font-style: normal;
+	line-height: 1.71;
+}
+
+.logo--footer {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.contact-info-footer a:hover,
+.contact-info-footer a:focus {
+	color: var(--color-blue);
+}
+
+.location {
+	color: var(--color-white);
+}
+
+.logo-studio--footer {
+	color: var(--color-white);
+}
+
+.contact-footer {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-item-footer:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.join-us-title {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--color-white);
+	margin-bottom: 20px;
+}
+
+.social-links-footer {
+	display: flex;
+	margin: 0 auto;
+	gap: 10px;
+}
+
+.social-link-footer {
+	width: 44px;
+	height: 44px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: var(--color-white);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus {
+	background-color: var(--color-blue);
+}
+
+.svg-footer {
+	fill: var(--color-white);
+
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg-footer:hover,
+.svg-footer:focus {
+	fill: currentColor;
+}
+
+.form-wrapper {}
+
+.sub-label {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--color-white);
+	margin-bottom: 20px;
+	display: block;
+}
+
+.input-wrapper-sub {
+	display: flex;
+	gap: 12px;
+}
+
+.sub-input {
+	width: 358px;
+	height: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+	outline-color: transparent;
+	background-color: transparent;
+	padding: 15px 16px;
+	color: rgba(255, 255, 255, 0.6);
+	;
+}
+
+.sub-input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-button {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.sub-icon {
+	fill: var(--color-white);
+
+}

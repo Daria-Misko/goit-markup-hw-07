@@ -1,0 +1,79 @@
+.team {
+	padding: 94px 0;
+	background-color: var(--bg-color-cards);
+}
+
+.team__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.team__card {
+	padding-bottom: 30px;
+	background-color: var(--color-white);
+	width: calc((100% - 90px) / 4);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+}
+
+.team__name {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.18;
+	margin: 30px 0px 10px 0px;
+	text-align: center;
+}
+
+.team__list p {
+	color: var(--main-color-text);
+	font-size: 16px;
+	line-height: 1.18;
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+.social-links {
+	display: flex;
+	margin: 0 auto;
+	gap: 10px;
+	padding: 0 32px;
+}
+
+.social-link {
+	width: 44px;
+	height: 44px;
+	color: var(--color-white);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+	background-color: var(--color-blue);
+}
+
+.svg-instagram {
+	fill: var(--social-icon-color);
+
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg-instagram:hover,
+.svg-instagram:focus {
+	fill: currentColor;
+}
+
+.social-link:hover .svg-instagram,
+.social-link:focus .svg-instagram {
+	fill: currentColor;
+}
