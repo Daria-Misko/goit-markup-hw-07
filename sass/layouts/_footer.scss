@@ -18,16 +18,15 @@ footer {
 .contact-info-footer {
 	font-style: normal;
 	line-height: 1.71;
+	& a:hover,
+	& a:focus {
+			color: var(--color-blue);
+		}
 }
 
 .logo--footer {
 	display: block;
 	margin-bottom: 20px;
-}
-
-.contact-info-footer a:hover,
-.contact-info-footer a:focus {
-	color: var(--color-blue);
 }
 
 .location {
@@ -47,9 +46,7 @@ footer {
 }
 
 .join-us-title {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
+	@include fs(14px, 700, 1.14, null);
 	text-transform: uppercase;
 	color: var(--color-white);
 	margin-bottom: 20px;
@@ -74,11 +71,10 @@ footer {
 	transition-property: background-color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-link-footer:hover,
-.social-link-footer:focus {
-	background-color: var(--color-blue);
+	&:hover,
+	&:focus {
+		background-color: var(--color-blue);
+	}
 }
 
 .svg-footer {
@@ -87,19 +83,14 @@ footer {
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover,
+	&:focus {
+		fill: currentColor;
+	}
 }
-
-.svg-footer:hover,
-.svg-footer:focus {
-	fill: currentColor;
-}
-
-.form-wrapper {}
 
 .sub-label {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
+	@include fs(14px, 700, 1.14, null);
 	text-transform: uppercase;
 	color: var(--color-white);
 	margin-bottom: 20px;
@@ -122,10 +113,9 @@ footer {
 	padding: 15px 16px;
 	color: rgba(255, 255, 255, 0.6);
 	;
-}
-
-.sub-input::placeholder {
-	color: rgba(255, 255, 255, 0.6);
+	&::placeholder {
+		color: rgba(255, 255, 255, 0.6);
+	}
 }
 
 .sub-button {
@@ -136,6 +126,5 @@ footer {
 }
 
 .sub-icon {
-	fill: var(--color-white);
-
+	fill: var(--color-white);	
 }

@@ -2,9 +2,7 @@ body {
 	color: var(--main-color-title);
 	background-color: var(--color-white);
 	font-family: "Roboto", sans-serif;
-	font-size: 14px;
-	line-height: 1.17;
-	letter-spacing: 0.03em;
+	@include fs(14px, 400, 1.17, 0.03em);
 }
 
 a {

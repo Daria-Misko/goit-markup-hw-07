@@ -9,10 +9,6 @@
 		visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden .modal {
-	transform: translate(-50%, -50%) scale(0);
-}
-
 .modal {
 	width: 528px;
 	height: 581px;
@@ -24,12 +20,9 @@
 	transform: translate(-50%, -50%);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
 		opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.is-hidden {
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: 0;
+	.backdrop.is-hidden & {
+		transform: translate(-50%, -50%) scale(0);
+		}
 }
 
 .modal-button {
@@ -47,22 +40,19 @@
 	justify-content: center;
 }
 
-.modal-button:hover .modal-esc-symbol,
-.modal-button:focus .modal-esc-symbol {
-	fill: var(--color-blue);
-}
+
 
 .modal-esc-symbol {
 	fill: var(--color-black);
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form {}
+		.modal-button:hover &,
+		.modal-button:focus & {
+			fill: var(--color-blue);
+		}
+}	
 
 .modal-form h2 {
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 1.15;
+	@include fs(26px, 700, 1.15, null);
 	text-align: center;
 	color: var(--main-color-title);
 	margin-bottom: 12px;
@@ -76,9 +66,7 @@
 }
 
 .modal-label {
-	font-size: 12px;
-	line-height: 1.16;
-	letter-spacing: 0.01em;
+	@include fs(12px, null, 1.16, 0.01em);
 	color: var(--main-color-text);
 }
 
@@ -110,10 +98,9 @@
 	resize: none;
 	height: 120px;
 	padding: 12px 16px;
-}
-
-.modal-comment::placeholder {
-	color: rgba(117, 117, 117, 0.5);
+	&::placeholder {
+			color: rgba(117, 117, 117, 0.5);
+		}
 }
 
 .checkbox-wrapper {
@@ -127,25 +114,23 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+	a {
+			color: var(--color-blue);
+			text-decoration-line: underline;
+			text-underline-offset: 3px;
+		}
+	&::before {
+		content: "";
+		margin-right: 15px;
+		width: 16px;
+		height: 15px;
+		border: 2px solid var(--main-color-title);
+		border-radius: 2px;
+		background-color: transparent;
 
-.check-label a {
-	color: var(--color-blue);
-	text-decoration-line: underline;
-	text-underline-offset: 3px;
-}
-
-.check-label::before {
-	content: "";
-	margin-right: 15px;
-	width: 16px;
-	height: 15px;
-	border: 2px solid var(--main-color-title);
-	border-radius: 2px;
-	background-color: transparent;
-
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+			border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
 }
 
 .check-input:checked+.check-label::before {

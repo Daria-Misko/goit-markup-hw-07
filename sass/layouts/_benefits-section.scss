@@ -4,50 +4,41 @@
 
 .benefits__list {
 	display: flex;
-}
-
-.benefits__list--position {
-	margin-top: 0;
-	margin-bottom: 0;
-	gap: 30px;
+	&--position {
+		margin-top: 0;
+		margin-bottom: 0;
+		gap: 30px;
+	}
 }
 
 .benefits__item {
 	width: calc((100% - 90px) / 4);
+	&::before {
+		content: "";
+		display: block;
+		background-size: 70px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: var(--bg-color-cards);
+		height: 120px;
+		margin-bottom: 30px;
+	}
+		&--antenna::before {
+			background-image: url(../images/icons/antenna.svg);
+		}
+		&--clock::before {
+			background-image: url(../images/icons/clock.svg);
+		}
+		&--diagram::before {
+			background-image: url(../images/icons/diagram.svg);
+		}
+		&--astronaut::before {
+			background-image: url(../images/icons/astronaut.svg);
+		}
 }
-
-.benefits__item::before {
-	content: "";
-	display: block;
-	background-size: 70px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: var(--bg-color-cards);
-	height: 120px;
-	margin-bottom: 30px;
-}
-
-.benefits__item--antenna::before {
-	background-image: url(../images/icons/antenna.svg);
-}
-
-.benefits__item--clock::before {
-	background-image: url(../images/icons/clock.svg);
-}
-
-.benefits__item--diagram::before {
-	background-image: url(../images/icons/diagram.svg);
-}
-
-.benefits__item--astronaut::before {
-	background-image: url(../images/icons/astronaut.svg);
-}
-
 .benefits__subtitle {
+	@include fs(14px, 700, 1.71, null);
 	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 1.71;
 	margin-bottom: 10px;
 }
 

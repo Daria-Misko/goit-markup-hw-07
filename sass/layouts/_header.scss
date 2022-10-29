@@ -16,33 +16,39 @@ header {
 
 .page-header__link {
 	position: relative;
-}
-
-.page-header__link--active::after {
-	content: "";
-	display: block;
-	align-items: center;
-	position: absolute;
-	top: 46px;
-	width: 100%;
-	height: 4px;
-	border: 1px solid var(--color-blue);
-	border-radius: 2px;
-	background-color: var(--color-blue);
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition-property: background-color, border;
+	color: var(--main-color-title);
+	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+	
+	&:hover,
+	&:focus {
+		color: var(--color-blue);
+	}
 
-.page-header__link::after {
+	&--active::after {
+		content: "";
+		display: block;
+		align-items: center;
+		position: absolute;
+		top: 46px;
+		width: 100%;
+		height: 4px;
+		border: 1px solid var(--color-blue);
+		border-radius: 2px;
+		background-color: var(--color-blue);
+		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+			border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition-property: background-color, border;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	&::after {
 	content: "";
 	transform: scaleX(0);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.page-header__link:hover::after {
+	&:hover::after {
 	content: "";
 	display: block;
 	align-items: center;
@@ -55,12 +61,17 @@ header {
 	background-color: var(--color-blue);
 	transform: scaleX(1);
 }
+}
 .logo-studio--header {
 	color: var(--color-black);
 }
 .page-header__nav {
 	display: flex;
 	gap: 93px;
+	a {
+		font-weight: 500;
+		letter-spacing: 0.02em;
+	}
 }
 .page-header__nav-list {
 	display: flex;
@@ -68,32 +79,14 @@ header {
 	align-items: center;
 }
 
-.page-header__nav a {
-	font-weight: 500;
-	letter-spacing: 0.02em;
-}
-
-.page-header__link {
-	color: var(--main-color-title);
-	transition-property: color;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-header__link:hover,
-.page-header__link:focus {
-	color: var(--color-blue);
-}
-
 .contact-info {
 	display: flex;
 	gap: 50px;
 	margin-left: auto;
-}
-
-.contact-info a {
-	font-weight: 500;
-	letter-spacing: 0.02em;
+	a {
+		font-weight: 500;
+		letter-spacing: 0.02em;
+	}
 }
 
 .contact-mail {
@@ -106,6 +99,11 @@ header {
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: var(--color-blue);
+	}
 }
 
 .svg-mail {
@@ -113,15 +111,9 @@ header {
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.svg-mail:hover {
-	fill: currentColor;
-}
-
-.contact-mail:hover,
-.contact-mail:focus {
-	color: var(--color-blue);
+	&:hover {
+		fill: currentColor;
+	}
 }
 
 .contact-phone {
@@ -134,11 +126,11 @@ header {
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contact-phone:hover,
-.contact-phone:focus {
-	color: var(--color-blue);
+	&:hover,
+	&:focus {
+		color: var(--color-blue);
+	}
 }
 
 .svg-phone {
@@ -146,8 +138,7 @@ header {
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.svg-phone:hover {
-	fill: currentColor;
+	&:hover {
+		fill: currentColor;
+	}
 }

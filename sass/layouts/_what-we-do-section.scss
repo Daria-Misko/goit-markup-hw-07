@@ -7,20 +7,30 @@
 	gap: 30px;
 	padding: 0;
 	justify-content: center;
-}
 
-.what-we-do-list li {
-	width: calc((100% - 60px) / 3);
-}
-
-.what-we-do-list img {
-	display: block;
-	padding: 0;
-	margin: 0;
+	li {
+			width: calc((100% - 60px) / 3);
+		}
+	
+	img {
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
 }
 
 .thumb {
 	position: relative;
+
+p {
+		color: var(--color-white);
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0;
+	}
 }
 
 .what-we-do-about {
@@ -29,14 +39,4 @@
 	width: 100%;
 	padding: 27px 0;
 	background-color: rgba(47, 48, 58, 0.8);
-}
-
-.thumb p {
-	color: var(--color-white);
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
-	text-align: center;
-	text-transform: uppercase;
-	margin: 0;
 }
