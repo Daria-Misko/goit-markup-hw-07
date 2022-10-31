@@ -695,8 +695,8 @@ header {
 }
 
 .examples-overlay-text {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.55;
   color: var(--color-white);
 }
@@ -941,18 +941,20 @@ footer {
           justify-content: center;
 }
 
+.modal-button:hover .modal-esc-symbol,
+.modal-button:focus .modal-esc-symbol {
+  fill: var(--color-blue);
+}
+
 .modal-esc-symbol {
   fill: var(--color-black);
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button:hover .modal-esc-symbol, .modal-button:focus .modal-esc-symbol {
-  fill: var(--color-blue);
-}
 
 .modal-form h2 {
-  font-size: 26px;
   font-weight: 700;
+  font-size: 20px;
   line-height: 1.15;
   text-align: center;
   color: var(--main-color-title);
@@ -1042,12 +1044,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
 }
-.check-label a {
-  color: var(--color-blue);
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  text-underline-offset: 3px;
-}
 .check-label::before {
   content: "";
   margin-right: 15px;
@@ -1058,6 +1054,13 @@ footer {
   background-color: transparent;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-label a {
+  margin-left: 4px;
+  color: var(--color-blue);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 3px;
 }
 
 .check-input:checked + .check-label::before {
